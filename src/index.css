@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/*  Exact Font Face Imports from Original Site                                */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Roslindale Display Condensed";
+  src: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ea6a1f3a5a8d28e11e3b718_RoslindaleDisplayCondensed-Regular.woff2") format("woff2"),
+       url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ea6a1d9808bdf61c698db90_RoslindaleDisplayCondensed-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Display Condensed";
+  src: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5eaaae1dfbbd8358eec5f26a_RoslindaleDisplayCondensed-Medium.woff2") format("woff2"),
+       url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5eaaae08fbbd835abfc5f258_RoslindaleDisplayCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ayer";
+  src: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ea6a1f3dddc5fb9e294dbf3_Ayer-Medium.woff2") format("woff2"),
+       url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ea6a1d9f0e208637f59ca5d_Ayer-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ea6a1f3c07d784835420a30_NeueMontreal-Regular.woff2") format("woff2"),
+       url("https://uploads-ssl.webflow.com/5ea69b4027484b2df2b45806/5ea6a1d9088154c745bdec23_NeueMontreal-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body, html {
+    width: 100%;
+    min-height: 100%;
+    background-color: #0a0a0a;
+    color: #0a0a0a;
+    font-family: "Neue Montreal", sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Hero Black Display Headline Typography (Thinner Roslindale font-weight: 400) */
+.hero-head-black {
+  font-family: "Roslindale Display Condensed", "Ayer", serif;
+  font-weight: 400;
+  color: #0a0a0a;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  line-height: 0.82;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Hero White Display Headline Typography for Menu Overlay */
+.hero-head-white {
+  font-family: "Roslindale Display Condensed", "Ayer", serif;
+  font-weight: 400;
+  color: #e5e3dc;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 0.88;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+/* Hero Italic Serifs ('the' and 'of') */
+.hero-italic-black {
+  font-family: "Ayer", "Roslindale Display Condensed", Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  color: #0a0a0a;
+  line-height: 0.85;
+}
+
+/* Hero Italic Serifs White for Menu Overlay */
+.hero-italic-white {
+  font-family: "Ayer", "Roslindale Display Condensed", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #e5e3dc;
+  line-height: 0.9;
+  transition: color 0.3s ease;
+}
+
+/* Work Page Giant Numbers Typography (Thinner Regular Roslindale weight 400) */
+.work-num-large {
+  font-family: "Roslindale Display Condensed", "Ayer", serif;
+  font-weight: 400;
+  font-size: 67vh;
+  line-height: 50vh;
+  letter-spacing: -0.05em;
+}
+
+/* Work Page Project Titles using Ayer Font Face */
+.work-title-ayer {
+  font-family: "Ayer", "Roslindale Display Condensed", serif;
+  font-weight: 500;
+  font-size: 12.1vh;
+  line-height: 9.8vh;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Work Page Sub-caption Typography */
+.work-caption-large {
+  font-family: "Roslindale Display Condensed", "Ayer", serif;
+  font-weight: 400;
+  font-size: 3.6vh;
+  line-height: 3.2vh;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* Ensure menu words turn solid emerald green #25e267 on hover */
+.group:hover .hero-head-white,
+.group:hover .hero-italic-white,
+a.hero-head-white:hover,
+a.hero-italic-white:hover {
+  color: #25e267 !important;
+}
+
+/* Authentic Hand-Drawn Organic Sketched Ring Animations */
+@keyframes sketchWobble1 {
+  0% {
+    transform: rotate(0deg) scale(1, 1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.045, 0.955);
+  }
+  50% {
+    transform: rotate(180deg) scale(0.955, 1.045);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.035, 0.965);
+  }
+  100% {
+    transform: rotate(360deg) scale(1, 1);
+  }
+}
+
+@keyframes sketchWobble2 {
+  0% {
+    transform: rotate(0deg) scale(1, 1);
+  }
+  25% {
+    transform: rotate(-90deg) scale(0.955, 1.045);
+  }
+  50% {
+    transform: rotate(-180deg) scale(1.045, 0.955);
+  }
+  75% {
+    transform: rotate(-270deg) scale(0.965, 1.035);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1, 1);
+  }
+}
+
+.animate-sketch-ring-1 {
+  animation: sketchWobble1 8s linear infinite;
+}
+
+.animate-sketch-ring-2 {
+  animation: sketchWobble2 11s linear infinite;
+}
+
+/* Continuous Attention-Grabbing Movement for Perform Rectangular Box */
+@keyframes performBoxAttention {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.75;
+    border-color: rgba(10, 10, 10, 0.75);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    border-color: rgba(10, 10, 10, 1);
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.15);
+  }
+}
+
+.animate-perform-attention {
+  animation: performBoxAttention 2.2s ease-in-out infinite;
+}
+
+/* Landing Page Specific Stroke (Off-white) */
+.l-head-stroke {
+  font-family: "Roslindale Display Condensed", serif;
+  font-weight: 400;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #e5e3dc;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 0.88;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Landing Page Specific Solid Green */
+.l-head-orange {
+  font-family: "Roslindale Display Condensed", serif;
+  font-weight: 400;
+  color: #25e267;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 0.88;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* Step 1: Slide Up Entrance Animation from bottom */
+@keyframes slideUpReveal {
+  0% {
+    transform: translateY(105%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  transform: translateY(105%);
+  opacity: 0;
+  animation: slideUpReveal 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Step 2: Left-to-Right Width Fill Animation */
+@keyframes widthFill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-width-fill {
+  width: 0%;
+  animation: widthFill 1.3s cubic-bezier(0.25, 1, 0.5, 1) 0.8s forwards;
+}
